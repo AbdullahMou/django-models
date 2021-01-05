@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block main %}
+<h2>Details :</h2>
+<h4>Model : {{post.model}}</h4>
+<h4>Owner : {{post.owner}}</h4>
+<h4>Price : {{post.price}}</h4>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
-</head>
+<a href="{% url 'update' post.pk%} ">Update</a><br><br>
 
-<body>
-    <main>
-        <h2>Details :</h2>
-        <h4>title : {{post.title}}</h4>
-        <h4>author : {{post.author}}</h4>
-        <h4>{{post.body}}</h4>
-    </main>
-</body>
-
-</html>
+<a href="{% url 'delete' post.pk%} ">Buy</a> {% endblock main%}
